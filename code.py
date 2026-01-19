@@ -1,12 +1,16 @@
 import tkinter as tk
 import turtle
 
-def generate():
+def create():
     t.clear()
 
     rule= ruleentry.get()
     itera=int(iterentry.get())
+    angle=int(angleentry.get())
+    step=int(stepentry.get())
+    
     s="F"
+    
     for i in range(itera):
         new = ""
         for ch in s:
@@ -18,11 +22,11 @@ def generate():
 
     for ch in s:
         if ch=="F":
-            t.forward(10)
+            t.forward(step)
         elif ch=="+":
-            t.right(90)
+            t.right(angle)
         elif ch=="-":
-            t.left(90)
+            t.left(angle)
 
 root=tk.Tk()
 
